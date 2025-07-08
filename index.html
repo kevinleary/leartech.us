@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearTech - Defense Technology Consulting</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'heading': ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        'brand-blue': '#0A2342', // The primary navy blue
+                        'brand-blue-medium': '#0B3954',
+                        'brand-blue-light': '#1E4A78',
+                        'brand-red': '#B22234', // A strong, classic red
+                        'brand-red-dark': '#8E1C2B', // A darker red for hover effects
+                        'brand-gray': '#F8F9FA', // The "white" or off-white
+                        'brand-text': '#CED4DA',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom styles for smooth scroll and other enhancements */
+        html {
+            scroll-behavior: smooth;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(10, 35, 66, 0.85), rgba(10, 35, 66, 0.85)), url('https://placehold.co/1920x1080/0A2342/FFFFFF?text=Abstract+Network');
+            background-size: cover;
+            background-position: center;
+        }
+        .section-title {
+            @apply text-3xl md:text-4xl font-heading font-bold text-brand-blue mb-4;
+        }
+        .section-subtitle {
+            @apply text-lg text-gray-600 max-w-3xl mx-auto;
+        }
+        .cta-button {
+            @apply bg-brand-red text-white font-bold py-3 px-8 rounded-lg hover:bg-brand-red-dark transition-colors duration-300;
+        }
+    </style>
+</head>
+<body class="bg-white font-sans">
+
+    <!-- Header -->
+    <header id="header" class="bg-brand-blue text-white sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-heading font-bold">LearTech</a>
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="#about" class="hover:text-gray-300 transition-colors duration-300">About Us</a>
+                <a href="#services" class="hover:text-gray-300 transition-colors duration-300">Services</a>
+                <a href="#projects" class="hover:text-gray-300 transition-colors duration-300">Projects</a>
+                <a href="#why-us" class="hover:text-gray-300 transition-colors duration-300">Why Choose Us</a>
+                <a href="#contact" class="bg-brand-red text-white font-semibold py-2 px-6 rounded-lg hover:bg-brand-red-dark transition-colors duration-300">Contact</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#about" class="block py-2 px-6 text-sm hover:bg-brand-blue-medium">About Us</a>
+            <a href="#services" class="block py-2 px-6 text-sm hover:bg-brand-blue-medium">Services</a>
+            <a href="#projects" class="block py-2 px-6 text-sm hover:bg-brand-blue-medium">Projects</a>
+            <a href="#why-us" class="block py-2 px-6 text-sm hover:bg-brand-blue-medium">Why Choose Us</a>
+            <a href="#contact" class="block py-2 px-6 text-sm hover:bg-brand-blue-medium">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-bg text-white">
+            <div class="container mx-auto px-6 py-24 md:py-32 text-center">
+                <h1 class="text-4xl md:text-6xl font-heading font-bold mb-4 leading-tight">Pioneering Defense Solutions for a Secure Future</h1>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-brand-text">Expert guidance in navigating the complexities of modern defense technology, from strategy to implementation.</p>
+                <a href="#services" class="cta-button text-lg">Explore Our Services</a>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="py-20 bg-brand-gray">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="section-title">Forging the Future of Defense with Unmatched Expertise</h2>
+                    <p class="section-subtitle">LearTech is a premier consultancy dedicated to advancing national security through technological superiority. Our mission is to provide government agencies and defense contractors with the strategic insights and technical acumen required to overcome the challenges of a rapidly evolving threat landscape.</p>
+                </div>
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2">
+                        <img src="https://placehold.co/600x400/1E4A78/FFFFFF?text=Strategy+Session" alt="Team collaborating on a project" class="rounded-lg shadow-xl w-full h-auto">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h3 class="text-2xl font-bold text-brand-blue mb-4">Our Core Values</h3>
+                        <ul class="space-y-4 text-gray-700">
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-brand-red mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <span><strong class="font-semibold">Integrity:</strong> Upholding the highest ethical standards in every engagement, ensuring trust and transparency.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-brand-red mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <span><strong class="font-semibold">Innovation:</strong> Continuously exploring and applying cutting-edge technology to solve complex defense challenges.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-brand-red mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <span><strong class="font-semibold">Mission Focus:</strong> Aligning our objectives with the critical mission of national security and defense.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="section-title">Our Core Service Areas</h2>
+                    <p class="section-subtitle">We provide a comprehensive suite of services designed to deliver a decisive advantage in the modern battlespace.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service Card 1 -->
+                    <div class="bg-brand-gray p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <div class="mb-4">
+                             <svg class="w-12 h-12 text-brand-red" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h-1.5m1.5 0v11.25A2.25 2.25 0 0 1 18 16.5h-2.25m-7.5 0h7.5m-7.5 0-1 3m8.5-3 1 3m0 0 .5 1.5m-.5-1.5h-9.5m0 0-.5 1.5M9 11.25v1.5M12 9v3.75m3-6v6" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-blue mb-2">Strategic Advisory</h3>
+                        <p class="text-gray-600">Guiding defense contractors and government agencies on technology roadmaps, market entry, and competitive positioning.</p>
+                    </div>
+                    <!-- Service Card 2 -->
+                    <div class="bg-brand-gray p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <div class="mb-4">
+                           <svg class="w-12 h-12 text-brand-red" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-2.25-1.313M21 7.5v2.25m0-2.25l-2.25 1.313M3 7.5l2.25-1.313M3 7.5l2.25 1.313M3 7.5v2.25m9 3l2.25-1.313M12 12.75l-2.25 1.313M12 12.75V15m0 6.75l2.25-1.313M12 21.75V19.5m0 2.25l-2.25-1.313m0-16.875L12 2.25l2.25 1.313M12 7.5l2.25 1.313M12 7.5l-2.25 1.313M3 14.25l2.25-1.313M21 14.25l-2.25-1.313M12 19.5l2.25-1.313M12 19.5l-2.25-1.313" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-blue mb-2">Systems Integration</h3>
+                        <p class="text-gray-600">Integrating complex hardware and software systems for seamless, interoperable, and resilient C4ISR capabilities.</p>
+                    </div>
+                    <!-- Service Card 3 -->
+                    <div class="bg-brand-gray p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <div class="mb-4">
+                            <svg class="w-12 h-12 text-brand-red" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.286Zm0 13.036h.008v.008h-.008v-.008Z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-blue mb-2">Cybersecurity & Resilience</h3>
+                        <p class="text-gray-600">Protecting critical infrastructure, platforms, and data from advanced persistent threats and cyber warfare.</p>
+                    </div>
+                    <!-- Service Card 4 -->
+                    <div class="bg-brand-gray p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <div class="mb-4">
+                            <svg class="w-12 h-12 text-brand-red" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 0 0 2.25-2.25V8.25a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 8.25v7.5A2.25 2.25 0 0 0 6.75 18Z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-blue mb-2">AI & Autonomous Systems</h3>
+                        <p class="text-gray-600">Leveraging AI and machine learning for enhanced situational awareness, predictive analytics, and autonomous operations.</p>
+                    </div>
+                    <!-- Service Card 5 -->
+                    <div class="bg-brand-gray p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <div class="mb-4">
+                           <svg class="w-12 h-12 text-brand-red" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m5.231 13.481L15 17.25m-4.5-15H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-blue mb-2">Acquisition & Procurement</h3>
+                        <p class="text-gray-600">Providing expert support to navigate the complex defense procurement lifecycle, from requirements to fielding.</p>
+                    </div>
+                     <!-- Service Card 6 -->
+                    <div class="bg-brand-gray p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <div class="mb-4">
+                            <svg class="w-12 h-12 text-brand-red" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                               <path stroke-linecap="round" stroke-linejoin="round" d="M12 18.75a6 6 0 0 0 6-6v-1.5m-6 7.5a6 6 0 0 1-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 0 1-3-3V4.5a3 3 0 0 1 6 0v8.25a3 3 0 0 1-3 3Z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-blue mb-2">Training & Simulation</h3>
+                        <p class="text-gray-600">Developing and implementing advanced training programs and simulation environments for operational readiness.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 bg-brand-gray">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="section-title">Proven Success in Critical Missions</h2>
+                    <p class="section-subtitle">Our portfolio showcases a history of successful engagements and innovative solutions delivered to our clients.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project Card 1 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
+                        <img src="https://placehold.co/600x400/0A2342/FFFFFF?text=Project+Alpha" alt="Project Alpha" class="w-full h-48 object-cover group-hover:opacity-80 transition-opacity duration-300">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-brand-blue mb-2">Next-Gen C2 Platform</h3>
+                            <p class="text-gray-600 mb-4">Developed and integrated a unified Command and Control platform, enhancing real-time situational awareness by 40%.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="text-xs font-semibold bg-brand-blue-light text-white px-2 py-1 rounded-full">Systems Integration</span>
+                                <span class="text-xs font-semibold bg-brand-blue-light text-white px-2 py-1 rounded-full">Strategic Advisory</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project Card 2 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
+                        <img src="https://placehold.co/600x400/B22234/FFFFFF?text=Project+Bravo" alt="Project Bravo" class="w-full h-48 object-cover group-hover:opacity-80 transition-opacity duration-300">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-brand-blue mb-2">Autonomous ISR Drone Swarm</h3>
+                            <p class="text-gray-600 mb-4">Deployed an AI-driven drone swarm for autonomous intelligence, surveillance, and reconnaissance missions in contested environments.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="text-xs font-semibold bg-brand-blue-light text-white px-2 py-1 rounded-full">AI & Autonomy</span>
+                                <span class="text-xs font-semibold bg-brand-blue-light text-white px-2 py-1 rounded-full">Cybersecurity</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project Card 3 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
+                        <img src="https://placehold.co/600x400/1E4A78/FFFFFF?text=Project+Charlie" alt="Project Charlie" class="w-full h-48 object-cover group-hover:opacity-80 transition-opacity duration-300">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-brand-blue mb-2">Secure Comms Network Hardening</h3>
+                            <p class="text-gray-600 mb-4">Executed a comprehensive security overhaul for a critical communications network, mitigating 99.8% of identified vulnerabilities.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="text-xs font-semibold bg-brand-blue-light text-white px-2 py-1 rounded-full">Cybersecurity</span>
+                                <span class="text-xs font-semibold bg-brand-blue-light text-white px-2 py-1 rounded-full">Systems Integration</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section id="why-us" class="py-20 bg-brand-blue text-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="section-title text-white">The LearTech Advantage</h2>
+                    <p class="section-subtitle text-brand-text">Our unique combination of experience, insight, and dedication sets us apart.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                    <div class="bg-brand-blue-light p-6 rounded-lg">
+                        <h3 class="text-2xl font-bold text-white">20+</h3>
+                        <p class="font-semibold">Years of Combined Experience</p>
+                    </div>
+                    <div class="bg-brand-blue-light p-6 rounded-lg">
+                        <h3 class="text-2xl font-bold text-white">98%</h3>
+                        <p class="font-semibold">Mission Success Rate</p>
+                    </div>
+                    <div class="bg-brand-blue-light p-6 rounded-lg">
+                        <h3 class="text-2xl font-bold text-white">50+</h3>
+                        <p class="font-semibold">Successful Project Integrations</p>
+                    </div>
+                    <div class="bg-brand-blue-light p-6 rounded-lg">
+                        <h3 class="text-2xl font-bold text-white">100%</h3>
+                        <p class="font-semibold">Commitment to Client Security</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-brand-gray">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="section-title">Request a Consultation</h2>
+                    <p class="section-subtitle">Let's discuss how LearTech can help you achieve your strategic objectives. Reach out to us for a confidential consultation.</p>
+                </div>
+                <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+                    <form action="#" method="POST">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="name" class="block text-gray-700 font-semibold mb-2">Full Name</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-red" required>
+                            </div>
+                            <div>
+                                <label for="email" class="block text-gray-700 font-semibold mb-2">Email Address</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-red" required>
+                            </div>
+                        </div>
+                        <div class="mb-6">
+                            <label for="subject" class="block text-gray-700 font-semibold mb-2">Subject</label>
+                            <input type="text" id="subject" name="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-red" required>
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 font-semibold mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-red" required></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="cta-button w-full md:w-auto">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brand-blue text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-heading font-bold mb-4">LearTech</h3>
+                    <p class="text-brand-text">Advancing national security through technology and strategy.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="hover:text-gray-300 transition-colors duration-300">About Us</a></li>
+                        <li><a href="#services" class="hover:text-gray-300 transition-colors duration-300">Services</a></li>
+                        <li><a href="#projects" class="hover:text-gray-300 transition-colors duration-300">Projects</a></li>
+                        <li><a href="#contact" class="hover:text-gray-300 transition-colors duration-300">Contact</a></li>
+                        <li><a href="#" class="hover:text-gray-300 transition-colors duration-300">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Connect With Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" aria-label="LinkedIn" class="text-brand-text hover:text-white transition-colors duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd"/></svg>
+                        </a>
+                        <a href="#" aria-label="Twitter" class="text-brand-text hover:text-white transition-colors duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-brand-blue-medium pt-8 text-center text-brand-text text-sm">
+                <p>&copy; 2024 LearTech. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
+        for (let link of mobileMenuLinks) {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        }
+    </script>
+
+</body>
+</html>
