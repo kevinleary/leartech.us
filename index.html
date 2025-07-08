@@ -82,8 +82,8 @@
         <!-- Hero Section -->
         <section class="hero-bg text-white">
             <div class="container mx-auto px-6 py-24 md:py-32 text-center">
-                <h1 class="text-4xl md:text-6xl font-heading font-bold mb-4 leading-tight">Pioneering Defense Solutions for a Secure Future</h1>
-                <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-brand-text">Expert guidance in navigating the complexities of modern defense technology, from strategy to implementation.</p>
+                <h1 class="text-4xl md:text-6xl font-heading font-bold mb-4 leading-tight">Pioneering Defense Solutions for a Secure and Agile Future</h1>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-brand-text">Expert guidance in navigating the complexities of modern defense technology, from guided strategy to technical implementation.</p>
                 <a href="#services" class="cta-button text-lg">Explore Our Services</a>
             </div>
         </section>
@@ -178,15 +178,15 @@
                         <h3 class="text-xl font-bold text-brand-blue mb-2">Acquisition & Procurement</h3>
                         <p class="text-gray-600">Providing expert support to navigate the complex defense procurement lifecycle, from requirements to fielding.</p>
                     </div>
-                     <!-- Service Card 6 -->
+                    <!-- Service Card 6: DevOps (NEW) -->
                     <div class="bg-brand-gray p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
                         <div class="mb-4">
                             <svg class="w-12 h-12 text-brand-red" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                               <path stroke-linecap="round" stroke-linejoin="round" d="M12 18.75a6 6 0 0 0 6-6v-1.5m-6 7.5a6 6 0 0 1-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 0 1-3-3V4.5a3 3 0 0 1 6 0v8.25a3 3 0 0 1-3 3Z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0011.667 0l3.181-3.183m-4.991-2.691V5.25a2.25 2.25 0 00-2.25-2.25h-4.5a2.25 2.25 0 00-2.25 2.25v4.5A2.25 2.25 0 006.75 12h4.5a2.25 2.25 0 002.25-2.25v-2.25" />
                             </svg>
                         </div>
-                        <h3 class="text-xl font-bold text-brand-blue mb-2">Training & Simulation</h3>
-                        <p class="text-gray-600">Developing and implementing advanced training programs and simulation environments for operational readiness.</p>
+                        <h3 class="text-xl font-bold text-brand-blue mb-2">DevSecOps & Automation</h3>
+                        <p class="text-gray-600">Integrating security into the DevOps pipeline and automating workflows to deliver resilient, secure software at the speed of mission relevance.</p>
                     </div>
                 </div>
             </div>
@@ -249,16 +249,16 @@
                 </div>
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
                     <div class="bg-brand-blue-light p-6 rounded-lg">
-                        <h3 class="text-2xl font-bold text-white">20+</h3>
-                        <p class="font-semibold">Years of Combined Experience</p>
+                        <h3 class="text-2xl font-bold text-white">7+</h3>
+                        <p class="font-semibold">Years of Experience in Government</p>
                     </div>
                     <div class="bg-brand-blue-light p-6 rounded-lg">
-                        <h3 class="text-2xl font-bold text-white">98%</h3>
+                        <h3 class="text-2xl font-bold text-white">10+</h3>
+                        <p class="font-semibold">Years of Experience in Software Development</p>
+                    </div>
+                    <div class="bg-brand-blue-light p-6 rounded-lg">
+                        <h3 class="text-2xl font-bold text-white">99%</h3>
                         <p class="font-semibold">Mission Success Rate</p>
-                    </div>
-                    <div class="bg-brand-blue-light p-6 rounded-lg">
-                        <h3 class="text-2xl font-bold text-white">50+</h3>
-                        <p class="font-semibold">Successful Project Integrations</p>
                     </div>
                     <div class="bg-brand-blue-light p-6 rounded-lg">
                         <h3 class="text-2xl font-bold text-white">100%</h3>
@@ -276,7 +276,7 @@
                     <p class="section-subtitle">Let's discuss how LearTech can help you achieve your strategic objectives. Reach out to us for a confidential consultation.</p>
                 </div>
                 <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-lg">
-                    <form action="#" method="POST">
+                    <form id="contact-form" action="https://formspree.io/f/xzzgljev" method="POST">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                             <div>
                                 <label for="name" class="block text-gray-700 font-semibold mb-2">Full Name</label>
@@ -299,6 +299,7 @@
                             <button type="submit" class="cta-button w-full md:w-auto">Send Message</button>
                         </div>
                     </form>
+                    <p id="form-status" class="text-center mt-4"></p>
                 </div>
             </div>
         </section>
@@ -353,6 +354,38 @@
                 mobileMenu.classList.add('hidden');
             });
         }
+
+        // Formspree contact form handling
+        var form = document.getElementById("contact-form");
+    
+        async function handleSubmit(event) {
+          event.preventDefault();
+          var status = document.getElementById("form-status");
+          var data = new FormData(event.target);
+          fetch(event.target.action, {
+            method: form.method,
+            body: data,
+            headers: {
+                'Accept': 'application/json'
+            }
+          }).then(response => {
+            if (response.ok) {
+              status.innerHTML = "Thanks for your submission!";
+              form.reset()
+            } else {
+              response.json().then(data => {
+                if (Object.hasOwn(data, 'errors')) {
+                  status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+                } else {
+                  status.innerHTML = "Oops! There was a problem submitting your form"
+                }
+              })
+            }
+          }).catch(error => {
+            status.innerHTML = "Oops! There was a problem submitting your form"
+          });
+        }
+        form.addEventListener("submit", handleSubmit)
     </script>
 
 </body>
